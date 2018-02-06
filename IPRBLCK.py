@@ -107,13 +107,13 @@ for ip in IP_List:
             query_DNS=dns.resolver.query(fqdn, 'A')
             print fqdn + ' ' + Found.rjust(25)
             log = open('IPRBLCK_results.log', 'a+')
-            log.write(fqdn + '\n')
+            log.write(fqdn + Found + '\n')
             log.close()
         except:
             print fqdn + ' ' + not_Found.rjust(25)
             print fqdn + ' ' + not_Found.rjust(25)
             log = open('IPRBLCK_results.log', 'a+')
-            log.write(fqdn + '\n')
+            log.write(fqdn + not_Found + '\n')
             log.close()
 
 
